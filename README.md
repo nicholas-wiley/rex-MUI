@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ReX on MUI
 
-## Getting Started
+**Purpose:** Frontend-only prototype of ReX submission workflow using Material-UI components.
 
-First, run the development server:
+**Tech stack:**
+- Next.js 15 (App Router)
+- TypeScript
+- Material-UI (MUI) v6
+- Static export (GitHub Pages compatible)
+
+---
+
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Deploy (GitHub Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# Generates /out folder with static HTML
 
-## Learn More
+# Deploy to GitHub Pages:
+# 1. Create repo: rex-on-mui
+# 2. Enable GitHub Pages (Settings → Pages → Deploy from branch: gh-pages)
+# 3. Push /out to gh-pages branch
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+├── layout.tsx          # MUI ThemeProvider
+├── page.tsx            # Landing / Stepper overview
+├── step-1/page.tsx     # Article Metadata
+├── step-2/page.tsx     # Authors & Affiliations
+├── step-3/page.tsx     # Funders
+├── step-4/page.tsx     # Review
+└── step-5/page.tsx     # Submit
 
-## Deploy on Vercel
+theme/
+└── rex-theme.ts        # MUI theme config (customize later)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/
+└── (reusable components)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+data/
+└── mock-data.json      # Fake data for testing
+```
+
+---
+
+## MUI Components Used
+
+- `Stepper` - Progress indicator
+- `TextField`, `Autocomplete` - Form inputs
+- `Button`, `Paper`, `Container` - Layout
+- `Table`, `Chip` - Data display
+
+---
+
+## TODO
+
+- [ ] Implement Steps 2-5
+- [ ] Add form validation
+- [ ] Mock data for testing
+- [ ] Customize theme to match ReX Figma design
+- [ ] GitHub Actions for auto-deploy
+
+---
+
+**Based on:** [ReX Components Figma](https://www.figma.com/design/CmAtBaedooTgME20c0pE7s/ReX-Components?node-id=947-47690)
