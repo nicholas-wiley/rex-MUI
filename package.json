@@ -1,7 +1,8 @@
 {
-  "name": "rex-on-mui",
+  "name": "research-exchange",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nonlinear.github.io/research-exchange",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
