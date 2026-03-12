@@ -1,4 +1,4 @@
-name: Research Exchange - Deploy to GitHub Pages
+name: Research Exchange
 
 on:
   push:
