@@ -16,11 +16,11 @@ export default function Home() {
     <Container maxWidth="lg">
       <Box sx={{ my: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Research Exchange (ReX) Prototype
+          🚀 Hello World - ReX Prototype
         </Typography>
         
         <Typography variant="body1" sx={{ mb: 4 }}>
-          Multi-step submission workflow for scholarly articles using Material-UI components.
+          GitHub Pages deployment test successful! Multi-step submission workflow for scholarly articles using Material-UI components.
         </Typography>
 
         <Stepper activeStep={0} sx={{ mb: 4 }}>
