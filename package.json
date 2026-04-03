@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "publish": "npm run build && git add docs/ app/ next.config.ts && git commit -m 'Deploy: Updated build' && git push origin main",
+    "publish:message": "npm run build && git add docs/ app/ next.config.ts && git commit && git push origin main"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
