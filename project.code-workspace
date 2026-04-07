@@ -1,0 +1,50 @@
+{
+    "settings": {
+    // Set the title bar format
+    "window.title": "📓 rex-mui",
+    "search.useIgnoreFiles": false,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true
+    },
+    "chat.tools.terminal.autoApprove": {
+      "scp": true
+    }
+  },
+  "folders": [
+    {
+      "path": "./"
+    }
+  ],
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🖋️ Hugo serve",
+        "type": "shell",
+        "command": "hugo serve -D -b http://localhost:1313",
+        "group": "build",
+        "runOptions": {
+          "runOn": "folderOpen"
+        },
+        "presentation": {
+          "reveal": "silent",
+          "panel": "dedicated"
+        }
+      },
+      {
+        "label": "🌐 Open browser",
+        "type": "shell",
+        "command": "sleep 2 && code --open-url http://localhost:1313",
+        "group": "build",
+        "runOptions": {
+          "runOn": "folderOpen"
+        },
+        "presentation": {
+          "reveal": "never",
+          "panel": "dedicated"
+        }
+      }
+    ]
+  }
+}

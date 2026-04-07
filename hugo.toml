@@ -1,0 +1,4 @@
+baseURL = "https://nicholas-wiley.github.io/rex-MUI/"
+languageCode = "en-us"
+title = "ReX Prototype"
+publishDir = "docs"

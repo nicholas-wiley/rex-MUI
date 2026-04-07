@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main style="padding: 2rem; max-width: 960px; margin: 0 auto;">
+  <h1 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">ReX — Prototype Steps</h1>
+  <div style="display: grid; gap: 0.5rem;">
+    {{ range sort (where .Site.RegularPages "Section" "steps") "Params.step" }}
+    <a href="{{ .RelPermalink }}" style="display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid #cac4d0; text-decoration: none; color: inherit;">
+      <span style="font-size: 0.75rem; color: #6750a4; font-weight: 700; min-width: 2rem;">{{ .Params.step }}</span>
+      <span style="font-size: 1rem;">{{ .Title }}</span>
+    </a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
