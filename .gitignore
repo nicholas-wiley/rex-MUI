@@ -5,3 +5,6 @@
 # Hugo
 /public/
 /resources/
+
+# Next.js leftovers
+/.next/

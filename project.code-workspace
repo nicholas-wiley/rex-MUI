@@ -33,6 +33,16 @@
         }
       },
       {
+        "label": "🚀 Publish Hugo",
+        "type": "shell",
+        "command": "hugo && git add docs/ && git commit -m \"Deploy: $(date '+%Y-%m-%d %H:%M')\" && git push",
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      },
+      {
         "label": "🌐 Open browser",
         "type": "shell",
         "command": "sleep 2 && code --open-url http://localhost:1313",
