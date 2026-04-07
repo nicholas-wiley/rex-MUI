@@ -1,0 +1,27 @@
+{{- $status := .Params.status | default "pending" -}}
+{{- $updated := "" -}}
+{{- with .Params.updated -}}
+  {{- $d := time . -}}
+  {{- $hours  := div (now.Sub $d).Hours 1.0 -}}
+  {{- $days   := div $hours 24.0 -}}
+  {{- $weeks  := div $days 7.0 -}}
+  {{- $months := div $days 30.0 -}}
+  {{- $years  := div $days 365.0 -}}
+  {{- if lt $hours 1.0 -}}
+    {{- $updated = "just now" -}}
+  {{- else if lt $days 1.0 -}}
+    {{- $n := $hours | int -}}{{- $updated = printf "%d %s ago" $n (cond (eq $n 1) "hour" "hours") -}}
+  {{- else if lt $weeks 1.0 -}}
+    {{- $n := $days | int -}}{{- $updated = printf "%d %s ago" $n (cond (eq $n 1) "day" "days") -}}
+  {{- else if lt $months 1.0 -}}
+    {{- $n := $weeks | int -}}{{- $updated = printf "%d %s ago" $n (cond (eq $n 1) "week" "weeks") -}}
+  {{- else if lt $years 1.0 -}}
+    {{- $n := $months | int -}}{{- $updated = printf "%d %s ago" $n (cond (eq $n 1) "month" "months") -}}
+  {{- else -}}
+    {{- $n := $years | int -}}{{- $updated = printf "%d %s ago" $n (cond (eq $n 1) "year" "years") -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ .RelPermalink }}" style="display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid #cac4d0; text-decoration: none; color: inherit;">
+  <span style="font-size: 1rem; font-weight: 500; color: #1c1b1f;">{{ .Params.step }}. {{ .Title }}</span>
+  <span style="font-size: 0.8rem; color: #49454f;">{{ $status }}{{ if $updated }} · {{ $updated }}{{ end }}</span>
+</a>
