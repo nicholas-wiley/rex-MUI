@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ if ne .Params.step 1 }}{{ partial "header-journal.html" . }}{{ end }}
 <main style="padding: 2rem; max-width: 960px; margin: 0 auto;">
   <a href="/steps/" style="font-size: 0.875rem; color: #6750a4; text-decoration: none;">← All steps</a>
   <h1 style="font-size: 1.5rem; font-weight: 500; margin: 1rem 0 0.25rem;">{{ .Title }}</h1>

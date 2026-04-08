@@ -1,0 +1,93 @@
+/* ReX Theme — generated from Figma variables (Proposed) */
+
+:root {
+
+  /* ── ReX tokens (source of truth) ───────────────── */
+  --rex-color-neutral-main:        #005274;
+  --rex-color-neutral-bg:          #D8F0FA;
+  --rex-color-success-main:        #115C36;
+  --rex-color-success-bg:          #E8FFF2;
+  --rex-color-attention-main:      #CC4E00;
+  --rex-color-attention-bg:        #FFF0E8;
+  --rex-color-error-main:          #B72D2D;
+  --rex-color-error-bg:            #FFE8E8;
+  --rex-color-update-bg:           #FFFEDE;
+  --rex-color-gray-main:           #1C1D1E;
+  --rex-color-gray-dark:           #595959;
+  --rex-color-gray-light:          #CCCCCC;
+  --rex-color-gray-lighter:        #EFEFF0;
+  --rex-color-gray-bg:             #FFFFFF;
+  --rex-color-brand-oa:            #611D69;
+  --rex-color-brand-orcid:         #A6CE39;
+
+  /* ── ReX typography tokens ───────────────────────── */
+  --rex-font-family:          'Open Sans', sans-serif;
+  --rex-font-title-size:      25px;
+  --rex-font-title-weight:    400;
+  --rex-font-subtitle-size:   20px;
+  --rex-font-subtitle-weight: 600;
+  --rex-font-item-size:       20px;
+  --rex-font-text-size:       14px;
+  --rex-font-text-weight:     400;
+  --rex-font-button-size:     14px;
+  --rex-font-button-weight:   600;
+
+  /* ── MD3 color map (drives @material/web components) */
+  --md-sys-color-primary:              var(--rex-color-neutral-main);
+  --md-sys-color-on-primary:           var(--rex-color-gray-bg);
+  --md-sys-color-primary-container:    var(--rex-color-neutral-bg);
+  --md-sys-color-on-primary-container: var(--rex-color-gray-main);
+
+  --md-sys-color-secondary:              var(--rex-color-brand-oa);
+  --md-sys-color-on-secondary:           var(--rex-color-gray-bg);
+  --md-sys-color-secondary-container:    #E8D5EA;
+  --md-sys-color-on-secondary-container: var(--rex-color-gray-main);
+
+  --md-sys-color-error:              var(--rex-color-error-main);
+  --md-sys-color-on-error:           var(--rex-color-gray-bg);
+  --md-sys-color-error-container:    var(--rex-color-error-bg);
+  --md-sys-color-on-error-container: var(--rex-color-gray-main);
+
+  --md-sys-color-background:         var(--rex-color-gray-bg);
+  --md-sys-color-on-background:      var(--rex-color-gray-main);
+  --md-sys-color-surface:            var(--rex-color-gray-bg);
+  --md-sys-color-on-surface:         var(--rex-color-gray-main);
+  --md-sys-color-surface-variant:    var(--rex-color-gray-lighter);
+  --md-sys-color-on-surface-variant: var(--rex-color-gray-dark);
+  --md-sys-color-outline:            var(--rex-color-gray-light);
+  --md-sys-color-outline-variant:    var(--rex-color-gray-lighter);
+
+  /* ── MD3 typography map ──────────────────────────── */
+  --md-ref-typeface-plain:  'Open Sans', sans-serif;
+  --md-ref-typeface-brand:  'Open Sans', sans-serif;
+
+  /* ── Spacing scale (base = 5px) ─────────────────── */
+  --space-base: 5px;
+  --space-1: var(--space-base);           /*  5px */
+  --space-2: calc(var(--space-base) * 2); /* 10px */
+  --space-3: calc(var(--space-base) * 3); /* 15px */
+  --space-4: calc(var(--space-base) * 6); /* 30px */
+  --space-5: calc(var(--space-base) * 9); /* 45px */
+  --space-6: calc(var(--space-base) * 12);/* 60px */
+
+}
+
+/* ── Link hover ──────────────────────────────────── */
+a:hover {
+  color: var(--rex-color-gray-main);
+}
+
+.rex-nav-link,
+#user-menu-anchor {
+  color: var(--rex-color-neutral-main);
+}
+
+header .rex-nav-link,
+header #user-menu-anchor {
+  text-decoration: none;
+}
+
+.rex-nav-link:hover,
+#user-menu-anchor:hover {
+  color: var(--rex-color-gray-main);
+}

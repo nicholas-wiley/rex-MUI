@@ -35,7 +35,7 @@
       {
         "label": "🚀 Publish Hugo",
         "type": "shell",
-        "command": "hugo && git add docs/ && git commit -m \"Deploy: $(date '+%Y-%m-%d %H:%M')\" && git push",
+        "command": "hugo --baseURL https://nicholas-wiley.github.io/rex-MUI/ && git add docs/ && git diff --cached --quiet || git commit -m \"Deploy: $(date '+%Y-%m-%d %H:%M')\" && git push origin main",
         "group": "build",
         "presentation": {
           "reveal": "always",
