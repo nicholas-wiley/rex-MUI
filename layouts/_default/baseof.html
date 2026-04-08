@@ -19,11 +19,22 @@
 
   <!-- Material Symbols font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-  <!-- Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- Inter + IBM Plex Mono (ReX brand fonts) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      /* Spacing tokens — override in theme/rex-theme.css */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 32px;
+      --space-6: 48px;
+    }
+
     body {
       margin: 0;
       font-family: Roboto, sans-serif;
@@ -31,10 +42,12 @@
       color: var(--md-sys-color-on-background, #1c1b1f);
     }
   </style>
+  <link rel="stylesheet" href="{{ "css/rex-theme.css" | relURL }}" />
 
   {{ block "head" . }}{{ end }}
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
+  {{ partial "header-tenant.html" . }}
   {{ block "main" . }}{{ end }}
   {{ partial "footer.html" . }}
 </body>

@@ -1,10 +1,24 @@
-{{ define "main" }}
-<main style="padding: 2rem; max-width: 960px; margin: 0 auto;">
-  <h1 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">ReX — Prototype Steps</h1>
-  <div style="display: grid; gap: 0.5rem;">
-    {{ range sort (where .Site.RegularPages "Section" "steps") "Params.step" }}
-    {{ partial "step-card.html" . }}
-    {{ end }}
-  </div>
-</main>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Title }} — ReX</title>
+  <script type="importmap">{"imports":{"@material/web/":"https://esm.run/@material/web/"}}</script>
+  <script type="module">import 'https://esm.run/@material/web/all.js';</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" />
+  <style>*, *::before, *::after { box-sizing: border-box; } body { margin: 0; }</style>
+  <link rel="stylesheet" href="{{ "css/rex-theme.css" | relURL }}" />
+</head>
+<body style="min-height: 100vh; font-family: var(--rex-font-family);">
+  <main style="padding: var(--space-6) var(--space-4); max-width: 960px; margin: 0 auto;">
+    <h1 style="font-size: var(--rex-font-subtitle-size); font-weight: 400; margin-bottom: var(--space-4);">ReX — Prototype Steps</h1>
+    <div style="display: grid; gap: var(--space-2);">
+      {{ range sort (where .Site.RegularPages "Section" "steps") "Params.step" }}
+      {{ partial "step-card.html" . }}
+      {{ end }}
+    </div>
+  </main>
+</body>
+</html>
