@@ -1,4 +1,4 @@
-<header style="background: #fff; border-bottom: 1px solid var(--rex-color-gray-light); padding: 0 var(--space-4); height: 88px; display: flex; align-items: center; justify-content: space-between;">
+<header style="background: #fff; {{ if eq .Params.step 1 }}border-bottom: 1px solid var(--rex-color-gray-light);{{ end }} padding: 0 var(--space-4); height: 88px; display: flex; align-items: center; justify-content: space-between;">
   <a href="{{ "/" | absURL }}" style="display: flex; align-items: center;">
     <img src="{{ .Site.Params.tenantLogo | absURL }}" alt="Wiley" style="width: 134px; height: 28px; object-fit: contain;" />
   </a>
