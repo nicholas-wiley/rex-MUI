@@ -20,10 +20,21 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+       
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 32px;
+      --space-6: 48px;
+    }
+
     body {
       margin: 0;
       font-family: Roboto, sans-serif;
@@ -31,10 +42,35 @@
       color: var(--md-sys-color-on-background, #1c1b1f);
     }
   </style>
+  <link rel="stylesheet" href="/css/rex-theme.css" />
 
   
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
+  <header style="background: #fff; border-bottom: 1px solid var(--rex-color-gray-light); padding: 0 var(--space-4); height: 88px; display: flex; align-items: center; justify-content: space-between;">
+  <a href="/" style="display: flex; align-items: center;">
+    <img src="/images/logos/wiley.svg" alt="Wiley" style="width: 134px; height: 28px; object-fit: contain;" />
+  </a>
+  <nav style="display: flex; align-items: center; gap: var(--space-4); font-size: var(--rex-font-text-size); font-family: var(--rex-font-family); font-weight: var(--rex-font-button-weight);">
+    <a href="#" class="rex-nav-link">My submissions</a>
+    <div style="position: relative;">
+      <button id="user-menu-anchor" onclick="document.getElementById('user-menu').open = !document.getElementById('user-menu').open"
+        style="display: flex; align-items: center; gap: var(--space-3); background: none; border: none; cursor: pointer; font-size: var(--rex-font-text-size); font-family: var(--rex-font-family); font-weight: var(--rex-font-button-weight); padding: 0;">
+        Jane Torres
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;">
+          <path d="M7.97251 11.8659C7.78914 11.8669 7.60736 11.8318 7.43759 11.7624C7.26783 11.6931 7.11342 11.5909 6.98323 11.4618L1.40978 5.88835C1.27986 5.75844 1.17681 5.6042 1.1065 5.43446C1.03619 5.26472 1 5.08279 1 4.89906C1 4.71534 1.03619 4.53341 1.1065 4.36366C1.17681 4.19392 1.27986 4.03969 1.40978 3.90978C1.53969 3.77986 1.69392 3.67681 1.86367 3.6065C2.03341 3.53619 2.21534 3.5 2.39906 3.5C2.58279 3.5 2.76472 3.53619 2.93446 3.6065C3.10421 3.67681 3.25844 3.77986 3.38835 3.90978L7.97251 8.5218L12.5706 4.09091C12.6988 3.94839 12.855 3.83384 13.0295 3.75444C13.2039 3.67503 13.3929 3.63249 13.5846 3.62945C13.7762 3.62641 13.9665 3.66295 14.1433 3.73679C14.3202 3.81062 14.48 3.92017 14.6126 4.05856C14.7453 4.19696 14.8479 4.36123 14.9141 4.5411C14.9804 4.72098 15.0088 4.91259 14.9976 5.10395C14.9864 5.2953 14.9359 5.4823 14.8491 5.65323C14.7624 5.82416 14.6413 5.97535 14.4935 6.09735L8.92 11.4757C8.66519 11.7214 8.32643 11.8609 7.97251 11.8659Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <md-menu id="user-menu" anchor="user-menu-anchor" anchor-corner="end-start" menu-corner="start-start">
+        <md-menu-item href="#"><div slot="headline">My Profile</div></md-menu-item>
+        <md-menu-item href="#"><div slot="headline">My ORCID ID</div></md-menu-item>
+        <md-menu-item href="#"><div slot="headline">Help</div></md-menu-item>
+        <md-menu-item href="#"><div slot="headline">Logout</div></md-menu-item>
+      </md-menu>
+    </div>
+  </nav>
+</header>
+
   
 <main style="padding: 2rem; max-width: 960px; margin: 0 auto;">
   <a href="/steps/" style="font-size: 0.875rem; color: #6750a4; text-decoration: none;">← All steps</a>
@@ -44,15 +80,15 @@
   <md-filled-button>Placeholder</md-filled-button>
 </main>
 
-  <footer style="margin-top: auto; padding: 2rem 1rem; text-align: center; border-top: 1px solid #e7e0ec;">
-  <nav style="display: flex; justify-content: center; gap: 0.25rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.875rem;">
-    <a href="#" style="color: #6750a4; text-decoration: none; padding: 0 0.75rem; border-right: 1px solid #cac4d0;">Privacy Policy</a>
-    <a href="#" style="color: #6750a4; text-decoration: none; padding: 0 0.75rem; border-right: 1px solid #cac4d0;">Terms &amp; Conditions</a>
-    <a href="#" style="color: #6750a4; text-decoration: none; padding: 0 0.75rem; border-right: 1px solid #cac4d0;">Contact Us</a>
-    <a href="#" style="color: #6750a4; text-decoration: none; padding: 0 0.75rem; border-right: 1px solid #cac4d0;">Help</a>
-    <a href="#" style="color: #6750a4; text-decoration: none; padding: 0 0.75rem;">Cookie Preferences</a>
+  <footer style="margin-top: auto; padding: var(--space-6) var(--space-3); text-align: center;">
+  <nav style="display: flex; justify-content: center; gap: 0; flex-wrap: wrap; margin-bottom: var(--space-4); font-size: var(--rex-font-text-size); font-family: var(--rex-font-family);">
+    <a href="#" class="rex-nav-link" style="padding: 0 var(--space-3); border-right: 1px solid var(--rex-color-gray-light);">Privacy Policy</a>
+    <a href="#" class="rex-nav-link" style="padding: 0 var(--space-3); border-right: 1px solid var(--rex-color-gray-light);">Terms &amp; Conditions</a>
+    <a href="#" class="rex-nav-link" style="padding: 0 var(--space-3); border-right: 1px solid var(--rex-color-gray-light);">Contact Us</a>
+    <a href="#" class="rex-nav-link" style="padding: 0 var(--space-3); border-right: 1px solid var(--rex-color-gray-light);">Help</a>
+    <a href="#" class="rex-nav-link" style="padding: 0 var(--space-3);">Cookie Preferences</a>
   </nav>
-  <p style="margin: 0; font-size: 0.8rem; color: #49454f;">©Atypon Systems, LLC &nbsp;<strong>Atypon ReX</strong></p>
+  <p style="margin: 0; font-size: var(--rex-font-text-size); font-family: var(--rex-font-family); color: var(--rex-color-gray-dark);">©Atypon Systems, LLC &nbsp;<strong>Atypon ReX</strong></p>
 </footer>
 
 </body>
