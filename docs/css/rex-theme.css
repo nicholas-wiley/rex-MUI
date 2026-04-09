@@ -252,7 +252,7 @@ a.progress {
   display: flex;
   align-items: center;
   height: 48px;
-  padding: 0 var(--space-3);
+  padding: var(--space-3) 31px;
   text-decoration: none;
   font-size: var(--rex-font-text-size);
   font-family: var(--rex-font-family);
@@ -274,6 +274,6 @@ a.progress.active {
 }
 
 a.progress.locked {
-  color: var(--rex-color-gray-light);
+  color: var(--rex-color-gray-dark);
   pointer-events: none;
 }

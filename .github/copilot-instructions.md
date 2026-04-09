@@ -34,5 +34,9 @@ Antes de adicionar qualquer propriedade visual (ícone, cor, sombra, espaçament
 - `.criteria .label` = font-weight 600
 - Classes de link são **scoped por componente**: `.header-tenant__link`, `.footer__link` etc.
 
+## Git workflow
+- **Commit após cada mudança** — sem acumular. Mensagem descritiva do que mudou e por quê (ex: "fix: locked color #595959 per Figma 496:54").
+- Isso permite reverter qualquer erro imediatamente.
+
 ## Visualização (paridade)
 VS Browser está instalado com proxy mode — ambos (usuário e agente) veem o mesmo output renderizado.
