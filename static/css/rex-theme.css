@@ -248,6 +248,13 @@ a {
   flex-shrink: 0;
 }
 
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 calc(-1 * var(--space-4));
+}
+
 a.progress {
   display: flex;
   align-items: center;
