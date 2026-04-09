@@ -22,15 +22,26 @@
 
   /* ── ReX typography tokens ───────────────────────── */
   --rex-font-family:          'Open Sans', sans-serif;
-  --rex-font-title-size:      25px;
+
+  --rex-font-title-size:      25px;   /* main title → h1 */
   --rex-font-title-weight:    400;
-  --rex-font-subtitle-size:   20px;
+  --rex-font-title-lh:        1.25;
+
+  --rex-font-subtitle-size:   20px;   /* subtitle → h2 */
   --rex-font-subtitle-weight: 600;
-  --rex-font-item-size:       20px;
-  --rex-font-text-size:       14px;
+  --rex-font-subtitle-lh:     1.25;
+
+  --rex-font-item-size:       20px;   /* item title → h3 */
+  --rex-font-item-weight:     400;
+  --rex-font-item-lh:         1.25;
+
+  --rex-font-text-size:       14px;   /* text → p */
   --rex-font-text-weight:     400;
-  --rex-font-button-size:     14px;
+  --rex-font-text-lh:         1.25;
+
+  --rex-font-button-size:     14px;   /* button */
   --rex-font-button-weight:   600;
+  --rex-font-button-lh:       1.25;
 
   /* ── MD3 color map (drives @material/web components) */
   --md-sys-color-primary:              var(--rex-color-neutral-main);
@@ -70,6 +81,8 @@
   --space-5: calc(var(--space-base) * 9); /* 45px */
   --space-6: calc(var(--space-base) * 12);/* 60px */
 
+  --rex-progress-sidebar-width: 360px;
+
 }
 
 /* ── Link hover ──────────────────────────────────── */
@@ -77,17 +90,190 @@ a:hover {
   color: var(--rex-color-gray-main);
 }
 
-.rex-nav-link,
-#user-menu-anchor {
+/* ── header-tenant links ─── */
+.header-tenant__link,
+.header-tenant__user-btn {
+  color: var(--rex-color-neutral-main);
+  text-decoration: none;
+  font-size: var(--rex-font-text-size);
+  font-family: var(--rex-font-family);
+  font-weight: var(--rex-font-button-weight);
+}
+.header-tenant__link:hover,
+.header-tenant__user-btn:hover {
+  color: var(--rex-color-gray-main);
+}
+
+/* ── footer links ─── */
+.footer__link {
+  color: var(--rex-color-neutral-main);
+  text-decoration: none;
+  font-size: var(--rex-font-text-size);
+  font-family: var(--rex-font-family);
+  font-weight: var(--rex-font-text-weight);
+}
+.footer__link:hover {
+  color: var(--rex-color-gray-main);
+}
+
+/* ── Page layout ─────────────────────────────────── */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.container.large {
+  max-width: 1600px;
+}
+
+.centered {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.centered.large {
+  max-width: 1600px;
+}
+
+.card {
+  background: var(--rex-color-gray-bg);
+  border: 1px solid var(--rex-color-gray-light);
+  border-radius: 0;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card + .card {
+  border-top: none;
+}
+
+.criteria-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.criteria {
+  display: flex;
+  gap: var(--space-4);
+  align-items: baseline;
+}
+
+.criteria .label {
+  width: 135px;
+  flex-shrink: 0;
+  color: var(--rex-color-gray-main);
+  font-weight: var(--rex-font-button-weight);
+}
+
+.criteria .value {
+  flex: 1;
+  color: var(--rex-color-gray-main);
+}
+
+/* ── Typography — semantic elements ─────────────── */
+h1 {
+  font-family: var(--rex-font-family);
+  font-size: var(--rex-font-title-size);
+  font-weight: var(--rex-font-title-weight);
+  line-height: var(--rex-font-title-lh);
+  color: var(--rex-color-gray-main);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--rex-font-family);
+  font-size: var(--rex-font-subtitle-size);
+  font-weight: var(--rex-font-subtitle-weight);
+  line-height: var(--rex-font-subtitle-lh);
+  color: var(--rex-color-gray-main);
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--rex-font-family);
+  font-size: var(--rex-font-item-size);
+  font-weight: var(--rex-font-text-weight);
+  line-height: var(--rex-font-item-lh);
+  color: var(--rex-color-gray-main);
+  margin: 0;
+}
+
+p, li, td, label {
+  font-family: var(--rex-font-family);
+  font-size: var(--rex-font-text-size);
+  font-weight: var(--rex-font-text-weight);
+  line-height: var(--rex-font-text-lh);
+  color: var(--rex-color-gray-main);
+  margin: 0;
+}
+
+strong {
+  font-weight: var(--rex-font-button-weight); /* text, bold = 600 */
+}
+
+em {
+  font-style: italic; /* text, italic */
+}
+
+a {
+  color: var(--rex-color-neutral-main); /* text, link */
+  font-size: var(--rex-font-text-size);
+  font-weight: var(--rex-font-text-weight);
+  line-height: var(--rex-font-text-lh);
+}
+
+/* ── Step: Progress Board ────────────────────────── */
+
+.progress-board {
+  flex-direction: row;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.progress-board__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-board__sidebar {
+  width: var(--rex-progress-sidebar-width);
+  flex-shrink: 0;
+}
+
+a.progress {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 var(--space-3);
+  text-decoration: none;
+  font-size: var(--rex-font-text-size);
+  font-family: var(--rex-font-family);
+  font-weight: var(--rex-font-text-weight);
+}
+
+a.progress + a.progress {
+  border-top: 1px solid var(--rex-color-gray-light);
+}
+
+a.progress.open {
   color: var(--rex-color-neutral-main);
 }
 
-header .rex-nav-link,
-header #user-menu-anchor {
-  text-decoration: none;
+a.progress.active {
+  background: var(--rex-color-neutral-main);
+  color: var(--rex-color-gray-bg);
+  font-weight: var(--rex-font-button-weight);
 }
 
-.rex-nav-link:hover,
-#user-menu-anchor:hover {
-  color: var(--rex-color-gray-main);
+a.progress.locked {
+  color: var(--rex-color-gray-light);
+  pointer-events: none;
 }

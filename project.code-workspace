@@ -22,7 +22,7 @@
       {
         "label": "🖋️ Hugo serve",
         "type": "shell",
-        "command": "hugo serve -D -b http://localhost:1313",
+        "command": "hugo serve -D -p 1473 -b http://localhost:1473 --disableFastRender --noHTTPCache",
         "group": "build",
         "runOptions": {
           "runOn": "folderOpen"
@@ -45,7 +45,7 @@
       {
         "label": "🌐 Open browser",
         "type": "shell",
-        "command": "sleep 2 && code --open-url http://localhost:1313",
+        "command": "sleep 2 && code --open-url http://localhost:1473",
         "group": "build",
         "runOptions": {
           "runOn": "folderOpen"
