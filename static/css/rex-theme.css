@@ -259,10 +259,6 @@ a.progress {
   font-weight: var(--rex-font-text-weight);
 }
 
-a.progress + a.progress {
-  border-top: 1px solid var(--rex-color-gray-light);
-}
-
 a.progress.open {
   color: var(--rex-color-neutral-main);
 }
