@@ -110,7 +110,6 @@ a:hover {
 /* ── footer links ─── */
 .footer__link {
   color: var(--rex-color-neutral-main);
-  text-decoration: none;
   font-size: var(--rex-font-text-size);
   font-family: var(--rex-font-family);
   font-weight: var(--rex-font-text-weight);
