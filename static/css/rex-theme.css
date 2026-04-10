@@ -230,6 +230,7 @@ a {
   font-size: var(--rex-font-text-size);
   font-weight: var(--rex-font-text-weight);
   line-height: var(--rex-font-text-lh);
+  text-decoration: underline;
 }
 
 /* ── MD3 Button overrides — ReX style ────────────── */
@@ -337,12 +338,6 @@ a.progress.open {
 
 a.progress.open:hover {
   color: var(--rex-color-gray-main);
-}
-
-a.progress.active {
-  background: var(--rex-color-neutral-main);
-  color: var(--rex-color-gray-bg);
-  font-weight: var(--rex-font-button-weight);
 }
 
 a.progress.locked {
