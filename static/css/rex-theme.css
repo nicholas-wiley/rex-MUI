@@ -82,6 +82,9 @@
   --space-6: calc(var(--space-base) * 12);/* 60px */
 
   --rex-progress-sidebar-width: 360px;
+  --rex-transition: background-color 0.2s ease, color 0.2s ease;
+  --rex-shadow-default: 0 4px 0 rgba(28, 29, 30, 0.05);
+  --rex-shadow-hover:   0 4px 0 rgba(28, 29, 30, 0.10);
 
 }
 
@@ -229,6 +232,67 @@ a {
   line-height: var(--rex-font-text-lh);
 }
 
+/* ── MD3 Button overrides — ReX style ────────────── */
+md-filled-button {
+  --md-filled-button-container-shape: 0px;
+  --md-filled-button-container-height: 48px;
+  --md-sys-color-primary: var(--rex-color-neutral-main);
+  --md-sys-color-on-primary: var(--rex-color-gray-bg);
+  --md-filled-button-label-text-font: var(--rex-font-family);
+  --md-filled-button-label-text-size: var(--rex-font-button-size);
+  --md-filled-button-label-text-weight: var(--rex-font-button-weight);
+  --md-filled-button-leading-space: var(--space-4);
+  --md-filled-button-trailing-space: var(--space-4);
+  --md-filled-button-hover-container-elevation: var(--md-filled-button-container-elevation);
+  width: 100%;
+}
+
+md-filled-button::part(label) {
+  flex: 1;
+  text-align: left;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--rex-color-neutral-main);
+  color: var(--rex-color-gray-bg);
+  font-family: var(--rex-font-family);
+  font-size: var(--rex-font-button-size);
+  font-weight: var(--rex-font-button-weight);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: var(--rex-transition);
+  box-shadow: var(--rex-shadow-default);
+  gap: var(--space-3);
+}
+
+.btn-primary:hover,
+a.progress.active:hover {
+  background: var(--rex-color-gray-main);
+  color: var(--rex-color-gray-bg);
+  box-shadow: var(--rex-shadow-hover);
+}
+
+.btn-primary.next svg {
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary.next:hover svg {
+  transform: translateX(var(--space-1));
+}
+
+.btn-primary {
+  font-weight: var(--rex-font-button-weight);
+}
+
 /* ── Step: Progress Board ────────────────────────── */
 
 .progress-board {
@@ -252,7 +316,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin: 0 calc(-1 * var(--space-4));
 }
 
 a.progress {
@@ -263,11 +326,17 @@ a.progress {
   text-decoration: none;
   font-size: var(--rex-font-text-size);
   font-family: var(--rex-font-family);
-  font-weight: var(--rex-font-text-weight);
 }
 
 a.progress.open {
   color: var(--rex-color-neutral-main);
+  text-decoration: underline;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
+}
+
+a.progress.open:hover {
+  color: var(--rex-color-gray-main);
 }
 
 a.progress.active {
@@ -277,6 +346,9 @@ a.progress.active {
 }
 
 a.progress.locked {
-  color: var(--rex-color-gray-dark);
+  color: var(--rex-color-gray-main);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
   pointer-events: none;
+  cursor: default;
 }
