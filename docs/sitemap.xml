@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1473/steps/06-abstract/</loc>
+    <loc>/steps/06-abstract/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/11-additional-information/</loc>
+    <loc>/steps/11-additional-information/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/07-affiliation/</loc>
+    <loc>/steps/07-affiliation/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/03-article-type/</loc>
+    <loc>/steps/03-article-type/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/09-author-details/</loc>
+    <loc>/steps/09-author-details/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/08-authors/</loc>
+    <loc>/steps/08-authors/</loc>
   </url><url>
-    <loc>http://localhost:1473/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/15-confetti-screen/</loc>
+    <loc>/steps/15-confetti-screen/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/13-final-review/</loc>
+    <loc>/steps/13-final-review/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/10-match-organizations/</loc>
+    <loc>/steps/10-match-organizations/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/01-my-submissions/</loc>
+    <loc>/steps/01-my-submissions/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/12-open-access/</loc>
+    <loc>/steps/12-open-access/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/02-progress-board/</loc>
+    <loc>/steps/02-progress-board/</loc>
   </url><url>
-    <loc>http://localhost:1473/</loc>
+    <loc>/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/</loc>
+    <loc>/steps/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/14-submission-overview/</loc>
+    <loc>/steps/14-submission-overview/</loc>
   </url><url>
-    <loc>http://localhost:1473/tags/</loc>
+    <loc>/tags/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/05-title/</loc>
+    <loc>/steps/05-title/</loc>
   </url><url>
-    <loc>http://localhost:1473/steps/04-upload-manuscript/</loc>
+    <loc>/steps/04-upload-manuscript/</loc>
   </url>
 </urlset>
