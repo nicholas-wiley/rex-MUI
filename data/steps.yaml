@@ -1,0 +1,46 @@
+steps:
+  - id: 1
+    title: "My Submissions"
+    url: "/steps/01-my-submissions/"
+  - id: 2
+    title: "Progress Board"
+    url: "/steps/02-progress-board/"
+  - id: 3
+    title: "Article Type"
+    url: "/steps/03-article-type/"
+  - id: 4
+    title: "Upload Manuscript"
+    url: "/steps/04-upload-manuscript/"
+  - id: 5
+    title: "Title"
+    url: "/steps/05-title/"
+  - id: 6
+    title: "Abstract"
+    url: "/steps/06-abstract/"
+  - id: 7
+    title: "Affiliations"
+    url: "/steps/07-affiliation/"
+  - id: 8
+    title: "Authors"
+    url: "/steps/08-authors/"
+  - id: 9
+    title: "Author Details"
+    url: "/steps/09-author-details/"
+  - id: 10
+    title: "Match Organizations"
+    url: "/steps/10-match-organizations/"
+  - id: 11
+    title: "Additional Information"
+    url: "/steps/11-additional-information/"
+  - id: 12
+    title: "Open Access"
+    url: "/steps/12-open-access/"
+  - id: 13
+    title: "Final Review"
+    url: "/steps/13-final-review/"
+  - id: 14
+    title: "Submission Overview"
+    url: "/steps/14-submission-overview/"
+  - id: 15
+    title: "Submission Confirmed"
+    url: "/steps/15-confetti-screen/"

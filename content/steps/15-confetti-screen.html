@@ -1,0 +1,38 @@
+---
+title: "Confetti Screen"
+step: 15
+state: "default"
+---
+
+<main class="container step confetti-screen">
+
+  <div class="step-header">
+    <h1>Congratulations</h1>
+    <p>This manuscript has been submitted to the editorial office for review. Changes cannot be made during editorial review, but you can view the information and files you submitted, below.</p>
+  </div>
+
+  <div class="card">
+    <h2>What to expect next</h2>
+    <p>Your manuscript has been processed and submitted to the journal.</p>
+    <p>Your manuscript is being shared with the journal editors. You'll hear from them via email, confirming that your manuscript was received and is being reviewed. After that, you may receive emails requesting revisions, or a notification of acceptance or rejection. The length of the peer-review process varies by journal. <a href="#">Click here to learn more about what happens during the peer-review process.</a></p>
+    <p>You can go to My Submissions at any time to check the status of your manuscript.</p>
+  </div>
+
+  <div class="card">
+    <p>Indicate your agreement with the following statement:</p>
+    <p><em>"The journals I am associated with would benefit from using this submission system."</em></p>
+    <div class="rating">
+      <label><input type="radio" name="rating" value="1" /> Strongly disagree</label>
+      <label><input type="radio" name="rating" value="2" /> Disagree</label>
+      <label><input type="radio" name="rating" value="3" /> Neither agree nor disagree</label>
+      <label><input type="radio" name="rating" value="4" /> Agree</label>
+      <label><input type="radio" name="rating" value="5" /> Strongly agree</label>
+    </div>
+    <label for="comments">Please add any comments below to expand on your reply.</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+    <div class="step-actions" style="display: flex; justify-content: flex-end;">
+      <a href="#" class="btn-primary next">Submit{{< icon "next" >}}</a>
+    </div>
+  </div>
+
+</main>

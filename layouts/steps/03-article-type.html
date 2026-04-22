@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ if ne .Params.step 1 }}{{ partial "header-journal.html" . }}{{ end }}
+
+<main class="container step article-type">
+  <div class="article-type__body">
+
+    <div class="step-header">
+      <a href="/steps/02-progress-board/" class="back-link">
+        {{ partial "icons/previous.html" . }} Back to Progress Board
+      </a>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.description | markdownify | chomp }}</p>
+    </div>
+
+    <div class="card">
+      <p><strong>What kind of manuscript are you submitting?</strong></p>
+      {{ partial "components/field-select.html" (dict "ctx" . "id" "article-type" "label" "Article Type" "required" true "dataKey" "articleTypes") }}
+    </div>
+
+    {{ range .Params.confirmations }}
+    <div class="card">
+      <label class="checkbox">
+        <input type="checkbox" name="confirm-{{ .id }}" />
+        {{ .text }}
+      </label>
+    </div>
+    {{ end }}
+
+    <div class="step-actions" style="display: flex; justify-content: flex-end;">
+      <a href="#" class="btn-primary next">Confirm{{ partial "icons/next.html" . }}</a>
+    </div>
+
+  </div>
+</main>
+
+{{ end }}

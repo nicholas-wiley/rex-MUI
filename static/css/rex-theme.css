@@ -130,6 +130,10 @@ a:hover {
 .container.large {
   max-width: 1600px;
 }
+.container.step {
+  padding-top: 0;
+  padding-bottom: var(--space-4); /* 30px */
+}
 
 .centered {
   max-width: 1140px;
@@ -139,6 +143,15 @@ a:hover {
 
 .centered.large {
   max-width: 1600px;
+}
+
+.step-header {
+  padding: var(--space-4) 0; /* 30px top and bottom */
+  display: grid;
+  gap: var(--space-3);       /* 15px between items */
+}
+.step-header .back-link {
+  margin-bottom: var(--space-5); /* 45px + 15px gap = 60px total below back-link */
 }
 
 .card {
@@ -265,7 +278,6 @@ md-filled-button::part(label) {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  width: 100%;
   box-sizing: border-box;
   transition: var(--rex-transition);
   box-shadow: var(--rex-shadow-default);
@@ -294,6 +306,10 @@ a.progress.active:hover {
 }
 
 /* ── Step: Progress Board ────────────────────────── */
+
+.progress-board .btn-primary {
+  width: 100%;
+}
 
 .progress-board {
   flex-direction: row;

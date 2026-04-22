@@ -1,0 +1,53 @@
+---
+title: "Additional Information"
+step: 11
+state: "default"
+---
+
+<main class="container step additional-information">
+
+  <div class="step-header">
+    <a href="/steps/02-progress-board/" class="back-link">
+      {{< icon "previous" >}} Back to Progress Board
+    </a>
+    <h1>Additional Information</h1>
+    <p>Just a few more questions about your article. Please note that if your article advances to revision, we may ask you to provide more information.</p>
+  </div>
+
+  <div class="card">
+    <label for="keywords"><strong>Keywords</strong></label>
+    <p>We attempted to find keywords you identified in the manuscript. Confirm or revise the keywords we found. Type to add a new keyword (up to 10), use enter to separate keywords.</p>
+    <input type="text" id="keywords" name="keywords" placeholder="Keywords" />
+  </div>
+
+  <div class="card">
+    <p><strong>Is this submission for a special issue?</strong></p>
+    <p>If you were invited to submit material for a special issue, tell us about that here. This is not an opportunity to suggest a special issue or theme to the editors.</p>
+    <label class="radio"><input type="radio" name="special-issue" value="no" checked /> No, this is not for a special issue</label>
+    <label class="radio"><input type="radio" name="special-issue" value="yes" /> Yes, it is for a special issue</label>
+  </div>
+
+  <div class="card">
+    <p><strong>Do you or any of your co-authors have a conflict of interest to disclose?</strong></p>
+    <p>All authors are required to disclose any potential sources of conflict of interest. <a href="#">Read more about Conflict of Interest here.</a></p>
+    <label class="radio"><input type="radio" name="conflict" value="no" checked /> No, there is no conflict of interest</label>
+    <label class="radio"><input type="radio" name="conflict" value="yes" /> Yes, I'd like to disclose a potential conflict of interest</label>
+  </div>
+
+  <div class="card">
+    <p><strong>Suggested Peer Reviewers</strong></p>
+    <p>Enter contact information for at least 2 suggested peer reviewers with expertise in your manuscript's specific subject matter. Please note: the journal editor may choose different reviewers at their discretion.</p>
+    <fieldset>
+      <legend>Suggested Peer Reviewer 1</legend>
+      <label>First Name <input type="text" value="Anatoli" /></label>
+      <label>Last Name <input type="text" value="Kamali" /></label>
+      <label>Email <input type="email" value="AKamali@iavi.org" /></label>
+      <label>Primary Affiliation <input type="text" value="MRC/UVRI Uganda Research Unit on AIDS, Entebbe, Uganda" /></label>
+    </fieldset>
+  </div>
+
+  <div class="step-actions" style="display: flex; justify-content: flex-end;">
+    <a href="#" class="btn-primary next">Confirm{{< icon "next" >}}</a>
+  </div>
+
+</main>

@@ -1,0 +1,53 @@
+---
+title: "Open Access"
+step: 12
+state: "default"
+---
+
+<main class="container step open-access">
+
+  <div class="step-header">
+    <a href="/steps/02-progress-board/" class="back-link">
+      {{< icon "previous" >}} Back to Progress Board
+    </a>
+    <h1>Open Access</h1>
+    <p>Just a few more questions about your article. Please note that if your article advances to revision, we may ask you to provide more information.</p>
+  </div>
+
+  <div class="card">
+    <p><strong>Other discounts</strong></p>
+    <p>If you have received another type of discount code (such as a promotional discount code via e-mail or brochure), enter it below</p>
+    <label for="discount-code">Discount code <span>Optional</span></label>
+    <input type="text" id="discount-code" name="discount-code" placeholder="000000000" />
+  </div>
+
+  <div class="card">
+    <p><strong>Your Address</strong></p>
+    <p>After submitting your manuscript, you will receive a quote via email of your estimated Article Publication Charge (APC) and applicable discounts, taxes, waivers, and institutional coverage.</p>
+    <p>In order to properly calculate local currency and tax, an address is required to generate your quote.</p>
+    <p>In the event that an APC applies, this should match the billing address of the person, institution or department that will be responsible for handling payment.</p>
+    <p><em>Corresponding Author:</em> Jane Torres &mdash; <em>Affiliation:</em> John Wiley and Sons Ltd</p>
+    <label>Address <span aria-hidden="true">!</span>
+      <input type="text" placeholder="123 Jon Doe Street" />
+    </label>
+    <label>Address line 2 <input type="text" placeholder="Optional" /></label>
+    <label>Address line 3 <input type="text" placeholder="Optional" /></label>
+    <label>Country/Location <span aria-hidden="true">!</span>
+      <select><option>United Kingdom</option></select>
+    </label>
+    <label>State/Province <span aria-hidden="true">!</span>
+      <select><option>Manchester</option></select>
+    </label>
+    <label>City <span aria-hidden="true">!</span>
+      <input type="text" value="Manchester" />
+    </label>
+    <label>Postal Code <span aria-hidden="true">!</span>
+      <input type="text" value="11237" />
+    </label>
+  </div>
+
+  <div class="step-actions" style="display: flex; justify-content: flex-end;">
+    <a href="#" class="btn-primary next">Confirm{{< icon "next" >}}</a>
+  </div>
+
+</main>

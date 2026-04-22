@@ -1,0 +1,33 @@
+options:
+  - value: research-article
+    label: Research Article
+  - value: review-article
+    label: Review Article
+  - value: short-communication
+    label: Short Communication
+  - value: case-report
+    label: Case Report
+  - value: letter
+    label: Letter
+  - value: editorial
+    label: Editorial
+  - value: commentary
+    label: Commentary
+  - value: perspective
+    label: Perspective
+  - value: methods
+    label: Methods Article
+  - value: data-article
+    label: Data Article
+  - value: software-article
+    label: Software Article
+  - value: clinical-trial
+    label: Clinical Trial
+  - value: systematic-review
+    label: Systematic Review
+  - value: meta-analysis
+    label: Meta-Analysis
+  - value: protocol
+    label: Protocol
+  - value: erratum
+    label: Erratum

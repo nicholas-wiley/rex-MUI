@@ -1,0 +1,29 @@
+{{/*
+  Partial: components/field-select.html
+  Chamado de layouts (não content). Tem acesso completo a .Site.Data.
+
+  Params (via dict):
+    ctx      → contexto Hugo (passa "." do layout)
+    id       → string
+    label    → string
+    required → bool
+    dataKey  → string, chave em data/ (ex: "articleTypes" → data/articleTypes.yaml)
+    options  → slice inline fallback
+*/}}
+{{- $options := .options | default slice -}}
+{{- if .dataKey -}}
+  {{- $data := index .ctx.Site.Data .dataKey -}}
+  {{- if $data -}}{{- $options = $data.options -}}{{- end -}}
+{{- end -}}
+<md-outlined-select
+  id="{{ .id }}"
+  name="{{ .id }}"
+  label="{{ .label }}"
+  {{ if .required }}required{{ end }}
+  style="width: 100%;">
+  {{ range $options }}
+  <md-select-option value="{{ .value }}">
+    <div slot="headline">{{ .label }}</div>
+  </md-select-option>
+  {{ end }}
+</md-outlined-select>

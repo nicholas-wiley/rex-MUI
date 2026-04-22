@@ -1,7 +1,7 @@
 <header style="background: #fff; {{ if eq .Params.step 1 }}border-bottom: 1px solid var(--rex-color-gray-light);{{ end }}">
 <div class="centered large" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; height: 88px;">
-  <a href="{{ "/" | absURL }}" style="display: flex; align-items: center;">
-    <img src="{{ .Site.Params.tenantLogo | absURL }}" alt="Wiley" style="width: 134px; height: 28px; object-fit: contain;" />
+  <a href="{{ "/" | relURL }}" style="display: flex; align-items: center;">
+    <img src="{{ .Site.Params.tenantLogo | relURL }}" alt="Wiley" style="width: 134px; height: 28px; object-fit: contain;" />
   </a>
   <nav style="display: flex; align-items: center; gap: var(--space-4); font-size: var(--rex-font-text-size); font-family: var(--rex-font-family); font-weight: var(--rex-font-button-weight);">
     <a href="#" class="header-tenant__link">My submissions</a>

@@ -1,0 +1,25 @@
+{{/* shortcode: field-select
+  Usage: {{< field-select id="article-type" label="Article Type" required="true" data="article-types" >}}
+  Reads options from data/<data>.yaml (.options[])
+*/}}
+{{- $id := .Get "id" -}}
+{{- $label := .Get "label" -}}
+{{- $required := eq (.Get "required") "true" -}}
+{{- $dataKey := .Get "data" -}}
+{{- $options := slice -}}
+{{- if $dataKey -}}
+  {{- $data := index .Page.Site.Data $dataKey -}}
+  {{- if $data -}}{{- $options = $data.options -}}{{- end -}}
+{{- end -}}
+<md-outlined-select
+  id="{{ $id }}"
+  name="{{ $id }}"
+  label="{{ $label }}"
+  {{ if $required }}required{{ end }}
+  style="width: 100%;">
+  {{ range $options }}
+  <md-select-option value="{{ .value }}">
+    <div slot="headline">{{ .label }}</div>
+  </md-select-option>
+  {{ end }}
+</md-outlined-select>

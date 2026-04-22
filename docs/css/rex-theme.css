@@ -132,7 +132,7 @@ a:hover {
 }
 .container.step {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: var(--space-4); /* 30px */
 }
 
 .centered {
