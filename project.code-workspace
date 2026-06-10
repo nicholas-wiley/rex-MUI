@@ -1,7 +1,7 @@
 {
     "settings": {
     // Set the title bar format
-    "window.title": "📓 rex-mui",
+    "window.title": "rex-submission-prototypes",
     "search.useIgnoreFiles": false,
     "files.exclude": {
       "**/.git": true,
